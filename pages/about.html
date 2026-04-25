@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="About Sujal Patel - Web Developer.">
     <title>SUJAL PATEL | ABOUT</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/common.css">
     <!-- GSAP & ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
+
 <body>
     <div id="scroll-progress"></div>
     <div id="cursor"></div>
     <div id="cursor-blur"></div>
 
     <nav>
-        <div class="logo">SUJAL.DEV</div>
+        <div class="logo"><a href="../index.html">Sujal Patel</a></div>
         <div class="nav-links">
             <a href="../index.html">HOME</a>
             <a href="work.html">WORK</a>
             <a href="about.html">ABOUT</a>
             <a href="contact.html">CONTACT</a>
+            <a href="#" class="resume-btn" download>RESUME</a>
+            <button id="theme-toggle" class="theme-toggle">🌙</button>
         </div>
     </nav>
 
@@ -30,21 +34,51 @@
             <span class="section-label">ABOUT ME</span>
             <div style="max-width: 800px;">
                 <h1 style="font-size: clamp(3rem, 8vw, 6rem); line-height: 1; margin-bottom: 4rem;" class="bold-text">
-                    THE VISION<br>BEHIND THE<br><span style="color: var(--accent-lime);">CODE.</span>
+                    CRAFTING THE<br>MODERN WEB<br><span style="color: var(--accent-red);">ONE PROJECT AT A TIME.</span>
                 </h1>
                 <h2 style="font-size: clamp(1.5rem, 4vw, 2.5rem); line-height: 1.2; margin-bottom: 3rem;">
-                    I BLEND TECHNICAL PRECISION WITH CREATIVE VISION TO BUILD THE NEXT GENERATION OF THE WEB.
+                    I SPECIALIZE IN BUILDING CUSTOM WEBSITES AND TECHNICAL SOLUTIONS THAT BRING IDEAS TO LIFE.
                 </h2>
                 <p style="font-size: 1.2rem; color: var(--text-gray); line-height: 1.6; margin-bottom: 2rem;">
-                    With expertise in GSAP, React, and high-performance CSS, I transform complex ideas into fluid, interactive realities. My work is focused on performance, accessibility, and pixel-perfect execution.
+                    My journey in web development is driven by a passion for creating clean, functional, and efficient
+                    digital products. I focus on the core technologies of the web to deliver projects that are not only
+                    visually appealing but technically sound.
                 </p>
                 <p style="font-size: 1.2rem; color: var(--text-gray); line-height: 1.6;">
-                    Based in India, I collaborate with clients globally to create digital experiences that don't just look good, but feel extraordinary.
+                    Whether it's a personal portfolio, an expense tracker, or a multi-tenant SaaS platform, I approach
+                    every project with the same commitment to quality and performance.
                 </p>
+            </div>
+        </section>
+
+        <section id="skills" class="reveal">
+            <span class="section-label">TECHNICAL ARSENAL</span>
+            <div class="skills-grid">
+                <div class="skill-tag">HTML5 / CSS3</div>
+                <div class="skill-tag">JAVASCRIPT ES6</div>
+                <div class="skill-tag">REACT / NEXT.JS</div>
+                <div class="skill-tag">GSAP / FRAMER</div>
+                <div class="skill-tag">NODE.JS / EXPRESS</div>
+                <div class="skill-tag">TYPESCRIPT</div>
+                <div class="skill-tag">SUPABASE / SQL</div>
+                <div class="skill-tag">GIT / GITHUB</div>
+                <div class="skill-tag">FIGMA / UI DESIGN</div>
+                <div class="skill-tag">DOCKER / AWS</div>
             </div>
         </section>
     </main>
 
+    <footer>
+        <div class="copyright">© 2026 SUJAL PATEL. ALL RIGHTS RESERVED.</div>
+        <div class="footer-socials">
+            <a href="https://github.com/SujalPatelDeveloper" target="_blank">GITHUB</a>
+            <a href="#" target="_blank">LINKEDIN</a>
+            <a href="#" target="_blank">TWITTER</a>
+        </div>
+    </footer>
+
+    <button id="scroll-top">↑</button>
     <script src="../js/main.js"></script>
 </body>
+
 </html>
