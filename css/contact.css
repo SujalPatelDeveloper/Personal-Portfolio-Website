@@ -1,0 +1,21 @@
+.contact-section {
+    padding: 150px 5%;
+    text-align: center;
+}
+
+.email-link {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.2rem, 5vw, 3rem);
+    color: var(--text-dark);
+    text-decoration: underline;
+    font-weight: 700;
+    transition: var(--transition-smooth);
+}
+
+.email-link:hover {
+    color: var(--accent-red);
+}
+
+.contact-section h1 span {
+    color: var(--accent-red);
+}

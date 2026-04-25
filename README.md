@@ -48,9 +48,5 @@ root/
 2. **Open the project**:
    Simply open `index.html` in your favorite browser or use a live server extension in your editor.
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ---
 *Built with focus on performance and aesthetic excellence by Sujal Patel.*
