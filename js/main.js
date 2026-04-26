@@ -14,7 +14,7 @@ document.addEventListener('mousemove', (e) => {
 });
 
 // Cursor Hover Effects (Generic)
-const interactive = document.querySelectorAll('a, button, .magnetic-target');
+const interactive = document.querySelectorAll('a:not(.preview-card):not(.work-card), button, .magnetic-target');
 interactive.forEach(el => {
     el.addEventListener('mouseenter', () => {
         gsap.to(cursor, {
@@ -41,6 +41,7 @@ projectCards.forEach(card => {
         cursor.classList.add('view-mode');
         cursor.innerText = "VIEW";
         gsap.to(cursor, {
+            scale: 1,
             backgroundColor: "var(--accent-red)",
             borderColor: "var(--accent-red)",
             color: "#fff",
