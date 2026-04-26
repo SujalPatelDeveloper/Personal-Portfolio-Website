@@ -116,12 +116,12 @@ function initTextAnimations() {
     }
 
     // Section Titles Reveal
-    const sectionTitles = document.querySelectorAll('section h2, #work-hero h1, #about-hero h1, #contact h1');
+    const sectionTitles = document.querySelectorAll('section h2, #work-hero h1, #about-hero h1, #contact-hero h1, #contact h1');
     sectionTitles.forEach(title => {
         const text = title.innerText;
         // Check if it's the main PROJECTS title
         // Check if it's the main page headings
-        if (title.tagName === 'H1' && (title.closest('#work-hero') || title.closest('#about-hero') || title.closest('#contact'))) {
+        if (title.tagName === 'H1' && (title.closest('#work-hero') || title.closest('#about-hero') || title.closest('#contact-hero') || title.closest('#contact'))) {
              const text = title.innerText;
              const isWorkPage = title.closest('#work-hero');
              const accentColor = isWorkPage ? 'var(--accent-lime)' : 'var(--accent-red)';
@@ -299,20 +299,39 @@ function initWorkHoverAnimations() {
 
 // --- Live Clock ---
 function updateClock() {
-    const clockEl = document.getElementById('local-time');
-    if (!clockEl) return;
-
-    const now = new Date();
-    const timeStr = now.toLocaleTimeString('en-US', {
-        hour12: false,
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit'
+    const clockElements = [document.getElementById('local-time'), document.getElementById('local-time-contact')];
+    
+    clockElements.forEach(el => {
+        if (!el) return;
+        const now = new Date();
+        const timeStr = now.toLocaleTimeString('en-US', {
+            hour12: false,
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+        });
+        el.textContent = `${timeStr} GMT+5:30`;
     });
-    clockEl.textContent = `${timeStr} GMT+5:30`;
 }
 
-if (document.getElementById('local-time')) {
-    updateClock();
-    setInterval(updateClock, 1000);
+updateClock();
+setInterval(updateClock, 1000);
+// --- Copy to Clipboard ---
+const copyBtn = document.getElementById('copy-email');
+if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+        const email = "1410.sujalpatel@gmail.com";
+        navigator.clipboard.writeText(email).then(() => {
+            const originalText = copyBtn.innerText;
+            copyBtn.innerText = "COPIED!";
+            copyBtn.style.backgroundColor = "var(--accent-red)";
+            copyBtn.style.color = "#fff";
+            
+            setTimeout(() => {
+                copyBtn.innerText = originalText;
+                copyBtn.style.backgroundColor = "transparent";
+                copyBtn.style.color = "var(--text-dark)";
+            }, 2000);
+        });
+    });
 }

@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sujal Patel's Work - Selected Projects.">
-    <title>SUJAL PATEL | WORK</title>
+    <meta name="description" content="Explore the curated digital experiences and technical projects built by Sujal Patel, specializing in React, Next.js, and high-performance web development.">
+    <title>Work — Sujal Patel | Selected Projects</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/work.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- GSAP & ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -32,27 +34,31 @@
 
     <main>
         <section id="work-hero" class="reveal">
-            <div>
-                <span class="section-label">SELECTED WORKS</span>
-                <h1 class="bold-text" style="font-size: clamp(3rem, 10vw, 8rem); margin-bottom: 2rem;">PROJECTS<span
-                        style="color: var(--accent-lime);">.</span></h1>
-                <p style="font-size: 1.5rem; max-width: 800px; color: var(--text-muted); line-height: 1.4; font-weight: 500; text-transform: uppercase; letter-spacing: -0.02em;">
-                    A CURATED SELECTION OF DIGITAL EXPERIENCES, BUILT WITH PRECISION, PURPOSE, AND A RELENTLESS FOCUS ON MINIMALISM. I BRIDGE THE GAP BETWEEN CONCEPT AND CODE TO CREATE LASTING IMPACT.
-                </p>
-            </div>
-            <div class="hero-bottom">
-                <div class="hero-scroll">
-                    <span class="hero-scroll-line"></span>
-                    SCROLL TO EXPLORE
+            <!-- No section label here as requested -->
+            <div class="split-content">
+                <div class="left-col">
+                    <h1 class="bold-text" style="font-size: clamp(3rem, 10vw, 8rem); line-height: 0.9;">
+                        SELECTED<br>PROJECTS<span style="color: var(--accent-red);">.</span>
+                    </h1>
+                </div>
+                <div class="right-col">
+                    <p style="font-size: 1.5rem; color: var(--text-muted); line-height: 1.4; max-width: 500px;">
+                        A collection of digital solutions built with precision, leveraging React, Next.js, and AI to bridge the gap between concept and code.
+                    </p>
+                    <div class="hero-scroll" style="margin-top: 4rem;">
+                        <span class="hero-scroll-line"></span>
+                        SCROLL TO EXPLORE
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="work-grid-1" class="reveal" style="justify-content: center;">
+        <section id="projects-grid-1" class="reveal">
+            <span class="section-label">01 / SELECTED PROJECTS</span>
             <div class="work-grid">
                 <div class="work-card reveal">
                     <div class="work-img">
-                        <img src="../assets/expense_tracker.png" alt="Personal Expense Tracker">
+                        <img src="../assets/expense_tracker.png" alt="Expense Tracker">
                     </div>
                     <div class="work-info">
                         <h3>EXPENSE TRACKER</h3>
@@ -61,7 +67,7 @@
                 </div>
                 <div class="work-card reveal">
                     <div class="work-img">
-                        <img src="../assets/saas_platform.png" alt="Multi Tenant SaaS Platform">
+                        <img src="../assets/saas_platform.png" alt="SaaS Platform">
                     </div>
                     <div class="work-info">
                         <h3>SAAS PLATFORM</h3>
@@ -71,24 +77,39 @@
             </div>
         </section>
 
-        <section id="work-footer" class="reveal">
-            <div>
-                <div class="work-grid" style="border-top: none;">
-                    <div class="work-card reveal">
-                        <div class="work-img">
-                            <img src="../assets/expense_tracker.png" alt="Etheric OS Design">
-                        </div>
-                        <div class="work-info">
-                            <h3>ETHERIC OS</h3>
-                            <span class="work-tags">WEBGL / GSAP / THREE.JS</span>
-                        </div>
+        <section id="projects-grid-2" class="reveal">
+            <div class="work-grid">
+                <div class="work-card reveal">
+                    <div class="work-img">
+                        <img src="../assets/expense_tracker.png" alt="Etheric OS">
                     </div>
-                    <div class="work-card"
-                        style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
-                        <h2 style="font-size: 2rem; margin-bottom: 2rem;">WANT TO SEE MORE?</h2>
-                        <a href="contact.html" class="intro-cta magnetic-target" style="font-size: 1.5rem;">GET IN TOUCH
-                            ↗</a>
+                    <div class="work-info">
+                        <h3>ETHERIC OS</h3>
+                        <span class="work-tags">WEBGL / THREE.JS / GSAP</span>
                     </div>
+                </div>
+                <div class="work-card reveal" style="display: flex; flex-direction: column; justify-content: center; background: var(--text-dark); color: var(--bg-retro);">
+                    <h2 class="bold-text" style="font-size: 2.5rem; margin-bottom: 2rem;">HAVE A VISION?</h2>
+                    <p style="margin-bottom: 3rem; opacity: 0.8;">I am currently open for freelance collaborations and Summer 2025 internships.</p>
+                    <a href="contact.html" class="intro-cta magnetic-target" style="color: var(--bg-retro); font-size: 1.2rem;">LET'S CONNECT ↗</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="work-archive" class="reveal">
+            <span class="section-label">02 / THE ARCHIVE</span>
+            <div class="archive-list" style="margin-top: 4rem; border-top: 1px solid var(--border-dark);">
+                <div class="archive-item" style="display: flex; justify-content: space-between; align-items: center; padding: 2rem 0; border-bottom: 1px solid var(--border-dark);">
+                    <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.5rem;">PORTFOLIO V1</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted);">2024 / DESIGN & DEV</span>
+                </div>
+                <div class="archive-item" style="display: flex; justify-content: space-between; align-items: center; padding: 2rem 0; border-bottom: 1px solid var(--border-dark);">
+                    <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.5rem;">WEATHER DASHBOARD</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted);">2023 / API INTEGRATION</span>
+                </div>
+                <div class="archive-item" style="display: flex; justify-content: space-between; align-items: center; padding: 2rem 0; border-bottom: 1px solid var(--border-dark);">
+                    <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.5rem;">TASK MANAGER</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted);">2023 / JS LOGIC</span>
                 </div>
             </div>
 
@@ -97,10 +118,11 @@
                 <div class="footer-socials">
                     <a href="https://github.com/SujalPatelDeveloper" target="_blank">GITHUB</a>
                     <a href="#" target="_blank">LINKEDIN</a>
-                    <a href="#" target="_blank">TWITTER</a>
+                    <a href="#" target="_blank">INSTAGRAM</a>
                 </div>
             </footer>
         </section>
+    </main>
 
     <button id="scroll-top">↑</button>
     <script src="../js/main.js"></script>

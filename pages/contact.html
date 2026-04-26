@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Sujal Patel - Get in touch.">
-    <title>SUJAL PATEL | CONTACT</title>
+    <meta name="description" content="Get in touch with Sujal Patel for web development projects, freelance collaborations, or internship opportunities. Let's build something modern.">
+    <title>Contact — Sujal Patel | Let's Build Together</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/contact.css">
     <!-- GSAP & ScrollTrigger -->
@@ -31,18 +31,135 @@
     </nav>
 
     <main>
-        <section id="contact" class="reveal" style="justify-content: space-between; padding-bottom: 0;">
-            <div style="margin-top: 4rem;">
-                <span class="section-label">GET IN TOUCH</span>
-                <h1 class="bold-text reveal"
-                    style="font-size: clamp(3rem, 12vw, 10rem); line-height: 0.9; margin-top: 2rem; margin-bottom: 4rem;">
+        <section id="contact-hero" class="reveal">
+            <div style="width: 100%;">
+                <span class="section-label">01 / CONNECT</span>
+                <h1 class="bold-text"
+                    style="font-size: clamp(3rem, 15vw, 12rem); line-height: 0.9; margin-top: 2rem; margin-bottom: 4rem; letter-spacing: -0.02em;">
                     LET'S BUILD<br>THE FUTURE<span style="color: var(--accent-red);">.</span>
                 </h1>
-                <div class="reveal">
+                <div style="margin-top: 2rem; display: flex; align-items: center; gap: 2rem;">
                     <a href="mailto:1410.sujalpatel@gmail.com" class="email-link">1410.SUJALPATEL@GMAIL.COM</a>
-                    <p style="margin-top: 3rem; color: var(--text-dark); opacity: 0.6; font-size: 1.2rem;">Currently
-                        available for freelance opportunities and full-time positions.</p>
+                    <button id="copy-email" class="copy-btn" title="Copy to clipboard">COPY</button>
                 </div>
+            </div>
+        </section>
+
+        <section id="communication" class="reveal">
+            <span class="section-label">02 / COMMUNICATION</span>
+            <div class="comm-grid">
+                <div class="comm-item">
+                    <h3>LOCATION</h3>
+                    <p>Gujarat, IN</p>
+                    <span class="comm-meta" id="local-time-contact">00:00:00 (GMT+5:30)</span>
+                </div>
+                <div class="comm-item">
+                    <h3>AVAILABILITY</h3>
+                    <p><span class="status-dot"></span> Open for Internships</p>
+                    <span class="comm-meta">Summer 2025 • Full-time</span>
+                </div>
+                <div class="comm-item">
+                    <h3>RESPONSE</h3>
+                    <p>~ 24 Hours</p>
+                    <span class="comm-meta">Excluding public holidays</span>
+                </div>
+                <div class="comm-item">
+                    <h3>PHILOSOPHY</h3>
+                    <p>Logic Over Layout</p>
+                    <span class="comm-meta">Great products start with great conversations.</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="message-form" class="reveal">
+            <div class="split-content">
+                <div class="left-col">
+                    <span class="section-label">03 / DIRECT MESSAGE</span>
+                    <h2 class="bold-text" style="font-size: clamp(2rem, 5vw, 4rem); margin-top: 2rem;">
+                        HAVE A PROJECT<br>IN MIND?
+                    </h2>
+                    <div style="margin-top: 3rem;">
+                        <span class="group-label" style="margin-bottom: 1.5rem;">BEFORE YOU SEND</span>
+                        <ul style="list-style: none; font-size: 0.9rem; color: var(--text-muted); line-height: 2;">
+                            <li>• Mention your project goals</li>
+                            <li>• Estimated timeline / deadline</li>
+                            <li>• Your preferred tech stack</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-col">
+                    <form class="contact-form" style="margin-top: 3rem; max-width: 100%; margin-left: 0;">
+                        <div class="form-group">
+                            <label>NAME</label>
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>EMAIL</label>
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>THE PROJECT / INQUIRY</label>
+                            <textarea rows="5" placeholder="What are we building together?" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn bold-text">SEND MESSAGE ↗</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume-cta" class="reveal">
+            <div class="split-content">
+                <div class="left-col">
+                    <span class="section-label">04 / CREDENTIALS</span>
+                    <h2 class="bold-text" style="font-size: clamp(3rem, 8vw, 6rem); margin-top: 2rem;">WANT THE<br>FULL STORY?</h2>
+                </div>
+                <div class="right-col" style="padding-top: 4rem;">
+                    <div style="margin-bottom: 4rem;">
+                        <span class="group-label" style="margin-bottom: 1.5rem;">WHAT'S INSIDE</span>
+                        <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.6;">A deep dive into my 3-year academic journey, detailed technical arsenal, and the projects that define my problem-solving approach.</p>
+                    </div>
+                    <a href="#" class="resume-large-btn bold-text" download>DOWNLOAD CV ↘</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="reveal">
+            <span class="section-label">05 / COMMON QUESTIONS</span>
+            <div class="comm-grid" style="margin-top: 4rem; grid-template-columns: repeat(2, 1fr); gap: 6rem 4rem;">
+                <div class="comm-item">
+                    <h3>DO YOU WORK REMOTELY?</h3>
+                    <p>Yes, I am fully equipped for remote collaboration across all time zones.</p>
+                </div>
+                <div class="comm-item">
+                    <h3>ARE YOU OPEN TO FREELANCE?</h3>
+                    <p>Yes, I love taking on projects that challenge my problem-solving skills.</p>
+                </div>
+                <div class="comm-item">
+                    <h3>DO YOU USE AI FOR DEV?</h3>
+                    <p>Yes, I leverage AI to accelerate builds, optimize logic, and ship faster.</p>
+                </div>
+                <div class="comm-item">
+                    <h3>WHAT IS YOUR STACK?</h3>
+                    <p>React, Next.js, and GSAP, focused on high-performance web experiences.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="socials" class="reveal">
+            <span class="section-label">06 / DIGITAL FOOTPRINT</span>
+            <div class="social-grid">
+                <a href="https://github.com/SujalPatelDeveloper" target="_blank" class="social-item">
+                    <span class="social-name">GITHUB</span>
+                    <span class="social-desc">Code & Projects</span>
+                </a>
+                <a href="#" target="_blank" class="social-item">
+                    <span class="social-name">LINKEDIN</span>
+                    <span class="social-desc">Professional Network</span>
+                </a>
+                <a href="#" target="_blank" class="social-item">
+                    <span class="social-name">INSTAGRAM</span>
+                    <span class="social-desc">Life & Design</span>
+                </a>
             </div>
 
             <footer>
@@ -50,7 +167,7 @@
                 <div class="footer-socials">
                     <a href="https://github.com/SujalPatelDeveloper" target="_blank">GITHUB</a>
                     <a href="#" target="_blank">LINKEDIN</a>
-                    <a href="#" target="_blank">TWITTER</a>
+                    <a href="#" target="_blank">INSTAGRAM</a>
                 </div>
             </footer>
         </section>

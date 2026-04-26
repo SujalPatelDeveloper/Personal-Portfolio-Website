@@ -141,8 +141,10 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     border-top: 1px solid var(--border-dark);
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-top: 6rem;
+    /* Increased space from text above */
 }
 
 .intro-stat {
@@ -252,27 +254,31 @@
 .expertise-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 2.5rem;
     width: 100%;
     align-items: start;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .expertise-item {
     border: 1px solid var(--border-dark);
-    padding: 1.2rem 1.5rem;
+    padding: 3rem 2.5rem;
     transition: var(--transition-smooth);
-    height: fit-content;
+    height: 100%;
 }
 
 .expertise-item h3 {
-    margin-bottom: 0.6rem;
-    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    color: var(--accent-red);
 }
 
 .expertise-item p {
-    font-size: 0.8rem;
+    font-size: 1.05rem;
     color: var(--text-muted);
-    line-height: 1.5;
+    line-height: 1.6;
     margin: 0;
 }
 
@@ -409,7 +415,7 @@ body.dark-mode .expertise-item:hover h3 {
     color: var(--bg-retro);
     border-top: 1px solid var(--border-dark);
     border-bottom: 1px solid var(--border-dark);
-    margin-top: -0.5rem;
+    margin-top: 0;
     width: 100vw;
     position: relative;
     left: 50%;
@@ -460,7 +466,7 @@ body.dark-mode .expertise-item:hover h3 {
     grid-template-columns: repeat(4, 1fr);
     border-top: 1px solid var(--border-dark);
     border-bottom: 1px solid var(--border-dark);
-    margin-top: 3rem;
+    margin-top: 5rem;
 }
 
 .process-step {
@@ -490,12 +496,12 @@ body.dark-mode .expertise-item:hover h3 {
 .step-number {
     display: block;
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 700;
     color: var(--text-dark);
     opacity: 0.18;
     line-height: 1;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     letter-spacing: -0.05em;
     transition: var(--transition-smooth);
 }
@@ -506,8 +512,8 @@ body.dark-mode .step-number {
 }
 
 .process-step h3 {
-    font-size: 0.85rem;
-    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
     letter-spacing: 0.15em;
     color: var(--accent-red);
     transition: var(--transition-smooth);
@@ -518,9 +524,9 @@ body.dark-mode .step-number {
 }
 
 .process-step p {
-    font-size: 0.82rem;
+    font-size: 0.95rem;
     color: var(--text-muted);
-    line-height: 1.7;
+    line-height: 1.8;
     transition: var(--transition-smooth);
 }
 
