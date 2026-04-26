@@ -1,3 +1,15 @@
+#work-hero .section-label {
+    margin-bottom: 4rem;
+}
+
+#work-hero {
+    padding-bottom: 30px;
+}
+
+#work-footer {
+    padding-bottom: 0;
+}
+
 .work-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -39,6 +51,9 @@
 .work-info h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    overflow: hidden;
+    line-height: 1.2;
+    transition: none; /* Ensure no CSS transitions interfere with GSAP */
 }
 
 .work-tags {

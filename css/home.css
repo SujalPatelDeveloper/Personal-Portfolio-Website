@@ -102,46 +102,6 @@
 }
 
 /* Hero bottom bar */
-.hero-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    border-top: 1px solid var(--border-dark);
-    padding-top: 1.5rem;
-    width: 100%;
-}
-
-.hero-scroll {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    color: var(--text-muted);
-}
-
-.hero-scroll-line {
-    width: 40px;
-    height: 1px;
-    background: var(--text-muted);
-    display: block;
-    animation: scroll-pulse 2s ease-in-out infinite;
-}
-
-@keyframes scroll-pulse {
-
-    0%,
-    100% {
-        width: 40px;
-        opacity: 1;
-    }
-
-    50% {
-        width: 60px;
-        opacity: 0.5;
-    }
-}
 
 .hero-avail {
     font-size: 0.65rem;
@@ -293,7 +253,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    margin-top: 1.2rem;
     width: 100%;
     align-items: start;
 }
@@ -489,6 +448,10 @@ body.dark-mode .expertise-item:hover h3 {
 #process {
     justify-content: space-between;
     padding-bottom: 0;
+}
+
+#process h2 {
+    margin-top: 4rem;
 }
 
 /* Process Section */
