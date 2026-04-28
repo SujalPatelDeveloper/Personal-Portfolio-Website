@@ -422,10 +422,13 @@ body.dark-mode .expertise-item:hover h3 {
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
+    display: flex;
+    align-items: center;
 }
 
 .marquee-content {
     display: flex;
+    align-items: center;
     white-space: nowrap;
     width: max-content;
     animation: marquee 25s linear infinite;

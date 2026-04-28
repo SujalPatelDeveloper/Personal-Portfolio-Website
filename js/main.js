@@ -104,7 +104,7 @@ function initTextAnimations() {
     if (heroTitle) {
         const text = heroTitle.innerText;
         heroTitle.innerHTML = text.split('').map(char => `<span class="char">${char}</span>`).join('');
-        
+
         gsap.from(".char", {
             opacity: 0,
             y: 50,
@@ -123,17 +123,17 @@ function initTextAnimations() {
         // Check if it's the main PROJECTS title
         // Check if it's the main page headings
         if (title.tagName === 'H1' && (title.closest('#work-hero') || title.closest('#about-hero') || title.closest('#contact-hero') || title.closest('#contact'))) {
-             const text = title.innerText;
-             const isWorkPage = title.closest('#work-hero');
-             const accentColor = isWorkPage ? 'var(--accent-lime)' : 'var(--accent-red)';
-             
-             title.innerHTML = text.split('').map(char => {
-                 const isDot = char === '.';
-                 // Re-apply accent to dots or specific parts if needed
-                 const style = isDot ? `color: ${accentColor};` : '';
-                 return `<span class="char" style="${style}">${char === ' ' ? '&nbsp;' : char}</span>`;
-             }).join('');
-             gsap.from(title.querySelectorAll('.char'), {
+            const text = title.innerText;
+            const isWorkPage = title.closest('#work-hero');
+            const accentColor = isWorkPage ? 'var(--accent-lime)' : 'var(--accent-red)';
+
+            title.innerHTML = text.split('').map(char => {
+                const isDot = char === '.';
+                // Re-apply accent to dots or specific parts if needed
+                const style = isDot ? `color: ${accentColor};` : '';
+                return `<span class="char" style="${style}">${char === ' ' ? '&nbsp;' : char}</span>`;
+            }).join('');
+            gsap.from(title.querySelectorAll('.char'), {
                 opacity: 0,
                 y: 100,
                 filter: "blur(20px)",
@@ -144,25 +144,25 @@ function initTextAnimations() {
                     trigger: title,
                     start: "top 90%"
                 }
-             });
+            });
 
-             // Add hover effect that doesn't move the container
-             title.addEventListener('mouseenter', () => {
-                 gsap.to(title.querySelectorAll('.char'), {
-                     y: -10,
-                     stagger: 0.02,
-                     duration: 0.3,
-                     ease: "power2.out"
-                 });
-             });
-             title.addEventListener('mouseleave', () => {
-                 gsap.to(title.querySelectorAll('.char'), {
-                     y: 0,
-                     stagger: 0.01,
-                     duration: 0.3,
-                     ease: "power2.in"
-                 });
-             });
+            // Add hover effect that doesn't move the container
+            title.addEventListener('mouseenter', () => {
+                gsap.to(title.querySelectorAll('.char'), {
+                    y: -10,
+                    stagger: 0.02,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+            title.addEventListener('mouseleave', () => {
+                gsap.to(title.querySelectorAll('.char'), {
+                    y: 0,
+                    stagger: 0.01,
+                    duration: 0.3,
+                    ease: "power2.in"
+                });
+            });
         } else {
             gsap.from(title, {
                 scrollTrigger: {
@@ -207,12 +207,12 @@ window.addEventListener('load', () => {
         duration: 1,
         ease: "power3.out"
     }, "+=0.2")
-    .from("nav", {
-        y: -50,
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out"
-    }, "-=0.5");
+        .from("nav", {
+            y: -50,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out"
+        }, "-=0.5");
 });
 
 // --- Section Revelations ---
@@ -268,11 +268,11 @@ workImages.forEach(img => {
 // --- Cinematic Text Reveal for Work Projects ---
 function initWorkHoverAnimations() {
     const projectHeadings = document.querySelectorAll('.work-card h3');
-    
+
     projectHeadings.forEach(heading => {
         const text = heading.innerText;
         heading.innerHTML = text.split('').map(char => `<span class="work-char" style="display:inline-block;">${char === ' ' ? '&nbsp;' : char}</span>`).join('');
-        
+
         const chars = heading.querySelectorAll('.work-char');
         const card = heading.closest('.work-card');
 
@@ -301,7 +301,7 @@ function initWorkHoverAnimations() {
 // --- Live Clock ---
 function updateClock() {
     const clockElements = [document.getElementById('local-time'), document.getElementById('local-time-contact')];
-    
+
     clockElements.forEach(el => {
         if (!el) return;
         const now = new Date();
@@ -327,12 +327,52 @@ if (copyBtn) {
             copyBtn.innerText = "COPIED!";
             copyBtn.style.backgroundColor = "var(--accent-red)";
             copyBtn.style.color = "#fff";
-            
+
             setTimeout(() => {
                 copyBtn.innerText = originalText;
                 copyBtn.style.backgroundColor = "transparent";
                 copyBtn.style.color = "var(--text-dark)";
             }, 2000);
         });
+    });
+}
+
+// --- EmailJS Integration ---
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    // Initialize EmailJS with Public Key
+    emailjs.init("Ab2BY7Bz7TPl_OzvB");
+
+    contactForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const submitBtn = contactForm.querySelector('.submit-btn');
+        const originalText = submitBtn.innerText;
+        submitBtn.innerText = "SENDING...";
+        submitBtn.disabled = true;
+
+        const formTime = document.getElementById('form-time');
+        if (formTime) formTime.value = new Date().toLocaleString();
+
+        emailjs.sendForm('PPW_SERVICE_ID', 'PPW_TEMP_ID', this)
+            .then(() => {
+                submitBtn.innerText = "SUCCESS!";
+                submitBtn.style.backgroundColor = "var(--accent-blue)";
+                contactForm.reset();
+                setTimeout(() => {
+                    submitBtn.innerText = originalText;
+                    submitBtn.style.backgroundColor = "";
+                    submitBtn.disabled = false;
+                }, 3000);
+            }, (error) => {
+                console.error('FAILED...', error);
+                submitBtn.innerText = "FAILED!";
+                submitBtn.style.backgroundColor = "var(--accent-red)";
+                setTimeout(() => {
+                    submitBtn.innerText = originalText;
+                    submitBtn.style.backgroundColor = "";
+                    submitBtn.disabled = false;
+                }, 3000);
+            });
     });
 }

@@ -25,7 +25,7 @@
             <a href="work.html">WORK</a>
             <a href="about.html">ABOUT</a>
             <a href="contact.html" class="active">CONTACT</a>
-            <a href="#" class="resume-btn" download>RESUME</a>
+            <a href="../assets/resume/SujalPatel_Resume.pdf" class="resume-btn" download>RESUME</a>
             <button id="theme-toggle" class="theme-toggle">🌙</button>
         </div>
     </nav>
@@ -88,18 +88,20 @@
                     </div>
                 </div>
                 <div class="right-col">
-                    <form class="contact-form" style="margin-top: 3rem; max-width: 100%; margin-left: 0;">
+                    <form id="contact-form" class="contact-form" style="margin-top: 3rem; max-width: 100%; margin-left: 0;">
+                        <input type="hidden" name="title" value="New Portfolio Message">
+                        <input type="hidden" name="time" id="form-time">
                         <div class="form-group">
                             <label>NAME</label>
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
                             <label>EMAIL</label>
-                            <input type="email" placeholder="Your Email" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
                             <label>THE PROJECT / INQUIRY</label>
-                            <textarea rows="5" placeholder="What are we building together?" required></textarea>
+                            <textarea name="message" rows="5" placeholder="What are we building together?" required></textarea>
                         </div>
                         <button type="submit" class="submit-btn bold-text">SEND MESSAGE ↗</button>
                     </form>
@@ -118,7 +120,7 @@
                         <span class="group-label" style="margin-bottom: 1.5rem;">WHAT'S INSIDE</span>
                         <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.6;">A deep dive into my 3-year academic journey, detailed technical arsenal, and the projects that define my problem-solving approach.</p>
                     </div>
-                    <a href="#" class="resume-large-btn bold-text" download>DOWNLOAD CV ↘</a>
+                    <a href="../assets/resume/SujalPatel_Resume.pdf" class="resume-large-btn bold-text" download>DOWNLOAD CV ↘</a>
                 </div>
             </div>
         </section>
@@ -156,10 +158,6 @@
                     <span class="social-name">LINKEDIN</span>
                     <span class="social-desc">Professional Network</span>
                 </a>
-                <a href="#" target="_blank" class="social-item">
-                    <span class="social-name">INSTAGRAM</span>
-                    <span class="social-desc">Life & Design</span>
-                </a>
             </div>
 
             <footer>
@@ -167,13 +165,13 @@
                 <div class="footer-socials">
                     <a href="https://github.com/SujalPatelDeveloper" target="_blank">GITHUB</a>
                     <a href="https://www.linkedin.com/in/sujal-patel-coding/" target="_blank">LINKEDIN</a>
-                    <a href="#" target="_blank">INSTAGRAM</a>
                 </div>
             </footer>
         </section>
     </main>
 
     <button id="scroll-top">↑</button>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="../js/main.js"></script>
 </body>
 
