@@ -240,11 +240,30 @@
 }
 
 @media (max-width: 768px) {
+    #contact-hero, #communication, #message-form, #resume-cta, #faq, #socials {
+        height: auto !important;
+        min-height: 100vh;
+        padding: 100px 5% 60px;
+    }
+    
     .contact-form {
         padding: 1.5rem;
     }
 
     .social-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .comm-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .resume-large-btn {
+        padding: 1.5rem 2rem;
+        font-size: 1rem;
+        letter-spacing: 0.2em;
+        text-align: center;
+        width: 100%;
     }
 }

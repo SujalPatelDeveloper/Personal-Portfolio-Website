@@ -177,3 +177,44 @@
         gap: 2rem;
     }
 }
+
+@media (max-width: 768px) {
+    #work-hero,
+    #projects-grid,
+    #collaborations,
+    #work-archive,
+    #work-final {
+        height: auto !important;
+        min-height: 100vh;
+        padding: 100px 5% 60px;
+    }
+    
+    .hero-description {
+        font-size: 1.2rem;
+    }
+    
+    .archive-item {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        padding: 1.5rem 0;
+    }
+    
+    .archive-year {
+        font-size: 0.7rem;
+    }
+    
+    .archive-name {
+        font-size: 1.1rem;
+    }
+    
+    .archive-role {
+        text-align: left;
+        padding-right: 0;
+        font-size: 0.7rem;
+    }
+    
+    .archive-link {
+        text-align: left;
+        font-size: 1rem;
+    }
+}

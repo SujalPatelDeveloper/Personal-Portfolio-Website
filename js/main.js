@@ -376,3 +376,35 @@ if (contactForm) {
             });
     });
 }
+
+// --- Mobile Menu Logic ---
+function initMobileMenu() {
+    const nav = document.querySelector('nav');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (!nav || !navLinks) return;
+    
+    const toggleBtn = document.createElement('button');
+    toggleBtn.className = 'mobile-menu-toggle';
+    toggleBtn.setAttribute('aria-label', 'Toggle Menu');
+    toggleBtn.innerHTML = '<span></span><span></span><span></span>';
+    
+    nav.appendChild(toggleBtn);
+    
+    toggleBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        toggleBtn.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+    });
+    
+    const links = navLinks.querySelectorAll('a');
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            toggleBtn.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', initMobileMenu);
