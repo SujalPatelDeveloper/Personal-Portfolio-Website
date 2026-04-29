@@ -47,7 +47,7 @@ root/
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/SujalPatelDeveloper/Personal-Portfolio-Website.git
+   git clone https://github.com/SujalPatelCodes/Personal-Portfolio-Website.git
    ```
 2. **Configure EmailJS**:
    Open `js/main.js` and substitute your specific credentials:
